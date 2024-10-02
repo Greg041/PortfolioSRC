@@ -1,3 +1,6 @@
+// React imports
+import { BrowserRouter as Router } from 'react-router-dom'
+// Local imports
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import About from './Components/About/About'
@@ -10,15 +13,17 @@ import Footer from './Components/Footer/Footer'
 function App() {
 
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <MyWork />
-      <Contact />
-      <Footer />
-    </div>
+    <Router basename="/Portfolio">
+      <div>
+        <Navbar />
+        <Hero />
+        <About />
+        <Services />
+        <MyWork />
+        <Contact />
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
