@@ -1,12 +1,11 @@
 // Local imports
 import './Services.css'
 import themePattern from '../../assets/theme_pattern.svg'
-import arrowIcon from '../../assets/arrow_icon.svg'
 
 
 const Services = (): JSX.Element => {
   return (
-    <div className='services'>
+    <div id="services" className="services">
       <div className="services-title">
         <h2>Mis servicios</h2>
         <img src={themePattern} alt="Theme Pattern" />

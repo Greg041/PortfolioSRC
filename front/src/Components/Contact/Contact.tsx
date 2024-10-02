@@ -1,3 +1,5 @@
+import { FormEvent } from 'react'
+// Local imports
 import './Contact.css';
 import themePattern from '../../assets/theme_pattern.svg';
 import emailIcon from '../../assets/email-icon.svg';
@@ -5,9 +7,33 @@ import phoneIcon from '../../assets/phone.svg';
 import locationIcon from '../../assets/location.svg';
 
 
-const MyWork = (): JSX.Element => {
+const Contact = (): JSX.Element => {
+
+  const onSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    formData.append("access_key", "dc5e834b-388c-4f5c-8710-a9cb7e7c1faf");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      form.reset();
+      alert(data.message);
+    } else {
+      console.log("Error", data);
+      data.message;
+    }
+  };
+
   return (
-    <div className='contact'>
+    <div id="contact" className='contact'>
       <div className="contact-title">
         <h2>Contáctame</h2>
         <img src={themePattern} alt="" />
@@ -34,7 +60,7 @@ const MyWork = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <form className="contact-right">
+        <form onSubmit={onSubmit} className="contact-right">
           <label htmlFor="">Tu nombre</label>
           <input type="text" placeholder='Ingresa tu nombre' name="name" />
           <label htmlFor="">Tu correo</label>
@@ -48,4 +74,4 @@ const MyWork = (): JSX.Element => {
   )
 }
 
-export default MyWork;
+export default Contact;

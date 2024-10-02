@@ -10,7 +10,7 @@ import yugiohBot from '../../assets/works/yugioh_bot.jpg';
 
 const MyWork = (): JSX.Element => {
   return (
-    <div className='my-work'>
+    <div id="portfolio" className='my-work'>
       <div className="my-work-title">
         <h2>Mis últimos trabajos</h2>
         <img src={themePattern} alt="" />
