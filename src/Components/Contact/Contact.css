@@ -118,6 +118,15 @@
   transition: .3s;
 }
 
+.contact-social {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-social img {
+  width: 50px;
+}
+
 @media screen and (max-width: 1226px) {
   .contact {
     gap: 50px;

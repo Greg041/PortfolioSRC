@@ -1,6 +1,6 @@
 // React imports
 import { useRef, useState, RefObject } from 'react';
-import AnchorLink from "react-anchor-link-smooth-scroll"
+import AnchorLink from "react-anchor-link-smooth-scroll";
 // Local imports
 import './Navbar.css';
 import logo from '../../assets/logo.png';
@@ -12,7 +12,7 @@ import menuCloseIcon from '../../assets/close_menu.svg';
 const Navbar = () => {
   const [menu, setMenu] = useState('home');
   const menuRef: RefObject<HTMLUListElement> = useRef(null);
-  
+
   const openMenu = () => {
     if (menuRef.current) menuRef.current.style.right = '0';
   }
@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <img src={logo} alt="Logo"/>
+      <img src={logo} alt="Logo" />
       <img src={burgerIcon} onClick={openMenu} alt="burger open menu icon" className="nav-mob-open" />
       <ul ref={menuRef} className="nav-menu">
         <img src={menuCloseIcon} onClick={closeMenu} alt="Close menu icon" className="nav-mob-close" />
@@ -55,7 +55,7 @@ const Navbar = () => {
       </ul>
       <div className="nav-connect">
         <AnchorLink className='anchor-link' offset={50} href='#contact'>
-        Contáctame
+          Contáctame
         </AnchorLink>
       </div>
     </div>
