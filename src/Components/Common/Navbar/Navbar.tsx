@@ -3,10 +3,10 @@ import { useRef, useState, RefObject } from 'react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 // Local imports
 import './Navbar.css';
-import logo from '../../assets/logo.png';
-import undeline from '../../assets/underline.svg';
-import burgerIcon from '../../assets/burger_icon.svg';
-import menuCloseIcon from '../../assets/close_menu.svg';
+import logo from 'src/assets/logo.png';
+import undeline from 'src/assets/underline.svg';
+import burgerIcon from 'src/assets/burger_icon.svg';
+import menuCloseIcon from 'src/assets/close_menu.svg';
 
 
 const Navbar = () => {

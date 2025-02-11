@@ -1,11 +1,11 @@
 import './MyWork.css';
-import themePattern from '../../assets/theme_pattern.svg';
-import devSearch from '../../assets/works/devsearch.jpg';
-import geeksZone from '../../assets/works/geeks_zone.jpg';
-import investLanding from '../../assets/works/invest_landing.jpg';
-import iqPercentageReader from '../../assets/works/iq_percentage_reader.png';
-import botForex from '../../assets/works/bot_forex.jpg';
-import yugiohBot from '../../assets/works/yugioh_bot.jpg';
+import themePattern from 'src/assets/theme_pattern.svg';
+import devSearch from 'src/assets/works/devsearch.jpg';
+import geeksZone from 'src/assets/works/geeks_zone.jpg';
+import investLanding from 'src/assets/works/invest_landing.jpg';
+import iqPercentageReader from 'src/assets/works/iq_percentage_reader.png';
+import botForex from 'src/assets/works/bot_forex.jpg';
+import yugiohBot from 'src/assets/works/yugioh_bot.jpg';
 
 
 const MyWork = (): JSX.Element => {

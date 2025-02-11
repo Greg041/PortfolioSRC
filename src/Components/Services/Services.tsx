@@ -1,6 +1,6 @@
 // Local imports
 import './Services.css'
-import themePattern from '../../assets/theme_pattern.svg'
+import themePattern from 'src/assets/theme_pattern.svg'
 
 
 const Services = (): JSX.Element => {

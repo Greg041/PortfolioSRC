@@ -1,10 +1,12 @@
 // Local imports
 import './About.css'
-import profileImg from '../../assets/profile-img.jpg'
-import themePattern from '../../assets/theme_pattern.svg'
+import profileImg from 'src/assets/profile-img.jpg'
+import themePattern from 'src/assets/theme_pattern.svg'
 
 
 const About = () => {
+  const yearsActive: number = new Date().getFullYear() - 2021;
+
   return (
     <div id="about" className="about">
       <div className="about-title">
@@ -22,7 +24,7 @@ const About = () => {
         <div className="about-right">
           <div className="about-para">
             <p>
-              Tengo más de 2 años de experiencia laboral trabajando como Backend Developer con Django como mi framework estrella y más de 2 años  
+              Tengo más de {yearsActive} años de experiencia laboral trabajando como Backend Developer con Django como mi framework estrella y más de 2 años  
               trabajando con Javascript, CSS y React cumpliendo el papel de Full Stack developer.
             </p>
             <p>
@@ -57,7 +59,7 @@ const About = () => {
               <p>
                 Javascript
               </p>
-              <hr style={{width: '60%'}} />
+              <hr style={{width: '70%'}} />
             </div>
 
             <div className="about-skill">

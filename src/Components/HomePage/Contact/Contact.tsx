@@ -1,14 +1,13 @@
 import { FormEvent } from 'react';
-import AnchorLink from "react-anchor-link-smooth-scroll";
 // Local imports
 import './Contact.css';
-import themePattern from '../../assets/theme_pattern.svg';
-import emailIcon from '../../assets/email-icon.svg';
-import phoneIcon from '../../assets/phone.svg';
-import locationIcon from '../../assets/location.svg';
-import github from '../../assets/github.svg';
-import gitlab from '../../assets/gitlab.svg';
-import linkedin from '../../assets/linkedin.svg';
+import themePattern from 'src/assets/theme_pattern.svg';
+import emailIcon from 'src/assets/email-icon.svg';
+import phoneIcon from 'src/assets/phone.svg';
+import locationIcon from 'src/assets/location.svg';
+import github from 'src/assets/github.svg';
+import gitlab from 'src/assets/gitlab.svg';
+import linkedin from 'src/assets/linkedin.svg';
 
 
 const Contact = (): JSX.Element => {
@@ -16,6 +15,9 @@ const Contact = (): JSX.Element => {
   const onSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
+    // disable the form submit button while the request is being made
+    const submitButton = form.querySelector("button[type=submit]") as HTMLButtonElement;
+    submitButton.disabled = true;
     const formData = new FormData(form);
 
     formData.append("access_key", "dc5e834b-388c-4f5c-8710-a9cb7e7c1faf");
@@ -29,6 +31,7 @@ const Contact = (): JSX.Element => {
 
     if (data.success) {
       form.reset();
+      submitButton.disabled = false;
       alert(data.message);
     } else {
       console.log("Error", data);
@@ -50,39 +53,39 @@ const Contact = (): JSX.Element => {
           </p>
           <div className="contact-details">
             <div className="contact-detail">
-              <img src={emailIcon} alt="" />
+              <img src={emailIcon} alt="email-icon" />
               <p>Gregoriazuaje04@gmail.com</p>
             </div>
             <div className="contact-detail">
-              <img src={phoneIcon} alt="" />
+              <img src={phoneIcon} alt="phone-icon" />
               <p>+58 4122023643</p>
             </div>
             <div className="contact-detail">
-              <img src={locationIcon} alt="" />
+              <img src={locationIcon} alt="location-icon" />
               <p>Caracas, Venezuela</p>
             </div>
             <div className="contact-social">
-              <AnchorLink href="https://www.linkedin.com/in/gregori-azuaje-cabanerio/">
+              <a href="https://www.linkedin.com/in/gregori-azuaje-cabanerio/" target='_blank' rel="noreferrer">
                 <img src={linkedin} alt="linkedin-link" />
-              </AnchorLink>
+              </a>
 
-              <AnchorLink href="https://github.com/Greg041">
+              <a href="https://github.com/Greg041" target='_blank' rel="noreferrer"> 
                 <img src={github} alt="github-link" />
-              </AnchorLink>
+              </a>
 
-              <AnchorLink href="https://gitlab.com/Greg041">
+              <a href="https://gitlab.com/Greg041" target='_blank' rel="noreferrer">
                 <img src={gitlab} alt="gitlab-link" style={{ color: 'white' }} />
-              </AnchorLink>
+              </a>
             </div>
           </div>
         </div>
         <form onSubmit={onSubmit} className="contact-right">
-          <label htmlFor="">Tu nombre</label>
-          <input type="text" placeholder='Ingresa tu nombre' name="name" />
-          <label htmlFor="">Tu correo</label>
-          <input type="text" placeholder='Ingresa tu correo' name="email" />
-          <label htmlFor="">Escribe tu mensaje</label>
-          <textarea name="message" rows={8} placeholder="Ingresa tu mensaje"></textarea>
+          <label htmlFor="nameInput">Tu nombre</label>
+          <input id="nameInput" type="text" placeholder='Ingresa tu nombre' name="name" />
+          <label htmlFor="emailInput">Tu correo</label>
+          <input id="emailInput" type="text" placeholder='Ingresa tu correo' name="email" />
+          <label htmlFor="messageInput">Escribe tu mensaje</label>
+          <textarea id="messageInput" name="message" rows={8} placeholder="Ingresa tu mensaje"></textarea>
           <button type="submit" className="contact-submit">Enviar</button>
         </form>
       </div>

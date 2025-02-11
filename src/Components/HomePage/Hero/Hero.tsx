@@ -1,7 +1,7 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 // Local imports
 import './Hero.css'
-import profileImg from '../../assets/profile-img.jpg'
+import profileImg from 'src/assets/profile-img.jpg'
 
 
 const Hero = (): JSX.Element => {
