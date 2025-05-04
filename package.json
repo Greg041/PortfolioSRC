@@ -1,5 +1,6 @@
 {
-  "name": "front",
+  "homepage":"https://Greg041.github.io/PortfolioSRC/",
+  "name": "portfolio-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
