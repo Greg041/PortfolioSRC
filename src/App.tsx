@@ -4,7 +4,7 @@ import ProjectPage from './Pages/ProjectPage/ProjectPage';
 import Layout from './Layout';
 import { PROJECTS } from './consts/projects.const';
 // Libraries imports
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
 
