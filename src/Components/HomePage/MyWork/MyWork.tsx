@@ -1,12 +1,9 @@
+// Local imports
 import './MyWork.css';
 import themePattern from 'src/assets/theme_pattern.svg';
-import devSearch from 'src/assets/works/devsearch.jpg';
-import geeksZone from 'src/assets/works/geeks_zone.jpg';
-import investLanding from 'src/assets/works/invest_landing.jpg';
-import iqPercentageReader from 'src/assets/works/iq_percentage_reader.png';
-import botForex from 'src/assets/works/bot_forex.jpg';
-import yugiohBot from 'src/assets/works/yugioh_bot.jpg';
-
+// Libraries imports
+import { Link } from 'react-router-dom';
+import { PROJECTS } from 'src/consts/projects.const';
 
 const MyWork = (): JSX.Element => {
   return (
@@ -16,12 +13,13 @@ const MyWork = (): JSX.Element => {
         <img src={themePattern} alt="" />
       </div>
       <div className="my-work-container">
-        <img src={devSearch} alt="" />
-        <img src={geeksZone} alt="" />
-        <img src={investLanding} alt="" />
-        <img src={iqPercentageReader} alt="" />
-        <img src={botForex} alt="" />
-        <img src={yugiohBot} alt="" />
+        {
+          PROJECTS.map(
+            project => <Link to={`projects/${project.pagePath}`} key={project.name}>
+                <img src={project.projectImages[0]} alt={`${project.name} project link`} />
+              </Link>
+          )
+        }
       </div>
     </div>
   )

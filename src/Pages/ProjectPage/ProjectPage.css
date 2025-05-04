@@ -1,0 +1,137 @@
+.project-container {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.project-body {
+  width: 100%;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px; /* Aumentado el espacio entre columnas */
+  align-items: center; /* Centrado vertical */
+  min-height: 70vh; /* Altura mínima para asegurar espacio vertical */
+}
+
+/* Contenedor de la imagen y logo */
+.media-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+  padding-left: 20px;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+/* Animación desde la izquierda */
+.animate-from-left {
+  animation: slideFromLeft 0.8s ease forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estilo para el logo debajo de la imagen */
+.project-logo {
+  margin-top: 10px;
+}
+
+.logo-image {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Contenedor de la información */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3em;
+  align-self: baseline;
+  margin-top: 5em;
+  padding: 20px 0;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Animación desde abajo */
+.animate-from-bottom {
+  animation: slideFromBottom 0.8s ease forwards;
+  animation-delay: 0.2s; /* Pequeño retraso para efecto escalonado */
+}
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botón de regreso */
+.back-button-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.back-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #B415FF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #a20ae9; /* Morado más oscuro al hover */
+  transform: translateY(-2px);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .media-container {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .back-button-container {
+    top: 10px;
+    left: 10px;
+  }
+
+  .back-button {
+    width: 40px;
+    height: 40px;
+  }
+}

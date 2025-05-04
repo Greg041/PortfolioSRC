@@ -2,6 +2,7 @@
 import './About.css'
 import profileImg from 'src/assets/profile-img.jpg'
 import themePattern from 'src/assets/theme_pattern.svg'
+import Skill from './Skills'
 
 
 const About = () => {
@@ -24,57 +25,29 @@ const About = () => {
         <div className="about-right">
           <div className="about-para">
             <p>
-              Tengo más de {yearsActive} años de experiencia laboral trabajando como Backend Developer con Django como mi framework estrella y más de 2 años  
-              trabajando con Javascript, CSS y React cumpliendo el papel de Full Stack developer.
+              Tengo más de {yearsActive} años de experiencia laboral trabajando como Backend Developer con Django como mi framework estrella y más de {yearsActive - 1} años  
+              trabajando con Javascript y Typescript, CSS y React cumpliendo el papel de Full Stack developer.
             </p>
             <p>
               Mi pasión por el desarrollo de software y web me ha llevado a trabajar en proyectos personales y profesionales, usando una gran variedad
-              de librerías para poder cumplir con los requerimientos de cada proyecto.
+              de tecnologías para poder cumplir con los requerimientos de cada proyecto.
             </p>
           </div>
 
-          <div className="about-skills">
-            <div className="about-skill">
-              <p>
-                Python
-              </p>
-              <hr style={{width: '80%'}} />
-            </div>
-
-            <div className="about-skill">
-              <p>
-                Django
-              </p>
-              <hr style={{width: '70%'}} />
-            </div>
-
-            <div className="about-skill">
-              <p>
-                HTML & CSS
-              </p>
-              <hr style={{width: '60%'}} />
-            </div>
-
-            <div className="about-skill">
-              <p>
-                Javascript
-              </p>
-              <hr style={{width: '70%'}} />
-            </div>
-
-            <div className="about-skill">
-              <p>
-                React
-              </p>
-              <hr style={{width: '40%'}} />
-            </div>
-            
+          <div className="aboutlSkill">
+            <Skill skillName='Python' skillMastery={80} />
+            <Skill skillName='Django' skillMastery={70} />
+            <Skill skillName='Javascript' skillMastery={80} />
+            <Skill skillName='Typescript' skillMastery={70} />
+            <Skill skillName='Express' skillMastery={50} />
+            <Skill skillName='Nestjs' skillMastery={70} />
+            <Skill skillName='React' skillMastery={40} />
           </div>
         </div>
       </div>
       <div className="about-achievements">
           <div className="about-achievement">
-            <h2>+2</h2>
+            <h2>+{yearsActive}</h2>
             <p>
               años de experiencia laboral
             </p>

@@ -1,0 +1,33 @@
+.technology-tags-container {
+  margin-top: 30px;
+}
+
+.tags-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: #B415FF;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px; /* Bordes redondeados para forma ovalada */
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background-color: #a20ae9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
