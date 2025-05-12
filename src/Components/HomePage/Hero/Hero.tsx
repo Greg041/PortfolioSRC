@@ -15,7 +15,7 @@ const Hero = (): JSX.Element => {
         Desarrollador en Python con más de {yearsActive + 1} años de experiencia programando y más de {yearsActive} años de experiencia laboral. He trabajado en proyectos personales y
         profesionales usando tecnologías como Django, Django Rest Framework, Pandas, numpy, cv2, pyautogui, tkinter, React, Typescript, entre otras.
 
-        Enfocado en el desarrollo backend de aplicaciones web a través de Django y Django Rest Framework, sin embargo también tengo más de {yearsActive - 1} años de experiencia
+        Enfocado en el desarrollo backend de aplicaciones web a través de Django y Django Rest Framework, también poseo más de {yearsActive - 1} años de experiencia
         desarrollando con Javascript, Nestjs, React y Typescript para aportar un abanico general de herramientas para el desarrollo 
         de una web estándar o SPA.
 
