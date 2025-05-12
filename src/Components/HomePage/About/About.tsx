@@ -25,8 +25,8 @@ const About = () => {
         <div className="about-right">
           <div className="about-para">
             <p>
-              Tengo más de {yearsActive} años de experiencia laboral trabajando como Backend Developer con Django como mi framework estrella y más de {yearsActive - 1} años  
-              trabajando con Javascript y Typescript, CSS y React cumpliendo el papel de Full Stack developer.
+              Tengo más de {yearsActive} años de experiencia laboral trabajando como Backend Developer con Django como mi framework estrella y Nestjs, más de {yearsActive - 1} años  
+              trabajando con Javascript y Typescript, Nestjs, CSS y React cumpliendo el papel de Full Stack developer.
             </p>
             <p>
               Mi pasión por el desarrollo de software y web me ha llevado a trabajar en proyectos personales y profesionales, usando una gran variedad
