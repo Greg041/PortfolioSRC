@@ -16,7 +16,7 @@ export const PROJECTS: ProjectInfo[] = [
     name: "Instakash",
     description:
       "Instakash es una plataforma intercambio de divisas localizada en Perú. " +
-      "Trabajé como desarrollador backend desarrollando desde cero una API Rest a través de microservicios, " +
+      "Trabajé como desarrollador backend con Nestjs desarrollando desde cero una API Rest a través de microservicios, " +
       "una plataforma que incluye sistema de autenticación, creación " +
       "de tasas de cambio para las divisas aceptadas por instakash y un sistema de gestión de operaciones " +
       "cambiarias para que la empresa provea del servicio a otras empresas clientes localizadas en el país." +
@@ -38,7 +38,8 @@ export const PROJECTS: ProjectInfo[] = [
     name: "Crowdinvest",
     description:
       "Plataforma de inversión crowdfunding enfocada en diversos tipos de activos financieros. " +
-      "Trabajé como desarrollador full stack manteniendo y mejorando funcionalidades existentes y arquitectura del proyecto, " +
+      "Trabajé como desarrollador full stack con Django manteniendo y mejorando funcionalidades existentes " +
+      "y arquitectura del proyecto, " +
       "además de desarrollar nuevas funcionalidades para plataforma, " +
       "desde la integración de una pasarela de pagos a través de paypal, crypto y transferencias bancarias, hasta " +
       "la integración de Wagtail (cms desarrollado en django) agregando plantillas para las empresas clientes de " +
@@ -51,18 +52,19 @@ export const PROJECTS: ProjectInfo[] = [
     pagePath: "devsearch",
     name: "Devsearch",
     description:
-      "Proyecto personal cuya finalidad es ayudar a los desarrolladores a encontrar " +
+      "Proyecto personal desarrollado con Django y Django rest framework cuya finalidad es ayudar a los desarrolladores a encontrar " +
       "oportunidades laborales. Contiene sistema de registro y login, edición del perfil para agregar habilidades " +
       "técnicas, además de contar con una API la cual expone algunos endpoints para solicitar información de la Base de datos",
     projectImages: [devSearch, devSearch2, devSearch3],
-    projectUrl: "",
+    projectUrl: "https://devsearch-webapp-production.up.railway.app/",
     technologies: ["Python", "Django", "HTML", "CSS", "Javascript"],
   },
   {
     pagePath: "geekszone",
     name: "La zona del geek",
     description:
-      "Proyecto personal el cual consiste en un blog de tecnología y otras noticias enfocadas en el mundo geek.",
+      "Proyecto personal el cual consiste en un blog de tecnología y otras noticias enfocadas en el mundo geek. " +
+      "Realizado con Django en el backend y Bootstrap para estilizar las plantillas del front-end",
     projectImages: [geeksZone],
     projectUrl: "https://geeks-blog.up.railway.app/posts/?page=1",
     technologies: ["Python", "Django", "HTML", "CSS", "Javascript"],
@@ -70,17 +72,22 @@ export const PROJECTS: ProjectInfo[] = [
   {
     pagePath: "iq-percentage-reader",
     name: "IQ Option percentage reader",
-    description: "",
+    description:
+      "Software diseñado para leer el porcentaje de ganancia en la aplicación de Iqoption a través del uso " +
+      "de la API cv2 para python y python-tesseract",
     projectImages: [iqReader],
-    projectUrl: "",
+    projectUrl: "https://github.com/Greg041/iqoption-profit-percentage-reader",
     technologies: ["Python", "OpenCV"],
   },
   {
     pagePath: "bot-forex",
     name: "Bot forex",
-    description: "",
+    description:
+      "Software diseñado con Python para notificar posibles entradas al par EUR_USD del mercado Forex " +
+      "a través de parámetros dados de una estrategia de trading para este par",
     projectImages: [forexBot],
-    projectUrl: "",
+    projectUrl:
+      "https://github.com/Greg041/bot_forex_scalping_est_correlacionamiento_EUR_USD",
     technologies: ["Python"],
   },
 ];
