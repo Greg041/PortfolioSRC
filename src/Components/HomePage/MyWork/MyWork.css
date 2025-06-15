@@ -32,7 +32,7 @@
 
 .my-work-container img {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
   box-sizing: border-box;
   transition: .3s;
   cursor: pointer;
